@@ -26,3 +26,8 @@ install:
 # command to run tests, e.g. python setup.py test
 script: PYTHONPATH=extplugins nosetests --where=tests --verbosity=3
 
+after_archive:
+      
+      - echo $SHIPPABLE_ARCHIVE_DOWNLOAD_URL
+      - echo $SHIPPABLE_ARTIFACTS_URL
+      - echo $ARTIFACTS_UPLOAD_SUCCESSFUL
