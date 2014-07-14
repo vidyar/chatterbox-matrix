@@ -31,3 +31,10 @@ after_archive:
       - echo $SHIPPABLE_ARCHIVE_DOWNLOAD_URL
       - echo $SHIPPABLE_ARTIFACTS_URL
       - echo $ARTIFACTS_UPLOAD_SUCCESSFUL
+matrix:
+  allow_failures:
+    - python: 2.6
+      env:  B3_REPO='git+git://github.com/BigBrotherBot/big-brother-bot.git@master#egg=b3'
+    - python: 2.7
+      env:  B3_REPO='git+git://github.com/BigBrotherBot/big-brother-bot.git@master#egg=b3'
+      
