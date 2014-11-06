@@ -1,13 +1,8 @@
 # TravisCI config file. See http://travis-ci.org
 language: python
-
-
 python:
   - 2.6
   - 2.7
-
-
-
 before_script:
   - mysql -e 'create database b3_test;'
 
@@ -41,3 +36,4 @@ matrix:
       
 notifications:
    email: false
+build_image: shippable/minv2
